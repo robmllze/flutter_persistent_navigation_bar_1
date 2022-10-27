@@ -1,0 +1,132 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        // build_runner
+        {
+            "label": "Run build_runner",
+            "type": "shell",
+            "command": "flutter packages pub run build_runner build --delete-conflicting-outputs",
+            "problemMatcher": []
+        },
+        // Web Serve
+        // Serve the app in debug mode on port 8000 using canvaskit
+        // Note: Web rendering options include "html", "canvaskit" or "auto".
+        {
+            "label": "Web Serve (Debug)",
+            "type": "shell",
+            "command": "flutter run -d web-server --web-port 8000 --web-renderer canvaskit --web-hostname 0.0.0.0 --debug",
+            "problemMatcher": []
+        },
+        {
+            "label": "Web Serve (Developer)",
+            "type": "shell",
+            "command": "flutter run -d web-server --web-port 8000 --web-renderer canvaskit  --dart-define=\"developer=true\" --web-hostname 0.0.0.0 --debug",
+            "problemMatcher": []
+        },
+        {
+            "label": "Web Serve (Profile)",
+            "type": "shell",
+            "command": "flutter run -d web-server --web-port 8000 --web-renderer canvaskit --web-hostname 0.0.0.0 --profile",
+            "problemMatcher": []
+        },
+        {
+            "label": "Web Serve (Release)",
+            "type": "shell",
+            "command": "flutter run -d web-server --web-port 8000 --web-renderer canvaskit --web-hostname 0.0.0.0 --release"
+        },
+        // Flutter Run
+        {
+            "label": "Flutter Run (Debug)",
+            "type": "shell",
+            "command": "flutter run --debug",
+            "problemMatcher": []
+        },
+        {
+            "label": "Flutter Run (Developer)",
+            "type": "shell",
+            "command": "flutter run --debug --dart-define=\"developer=true\"",
+            "problemMatcher": []
+        },
+        {
+            "label": "Flutter Run (Profile)",
+            "type": "shell",
+            "command": "flutter run --profile"
+        },
+        {
+            "label": "Flutter Run (Release)",
+            "type": "shell",
+            "command": "flutter run --release"
+        },
+        // Flutter Run - Chrome
+        {
+            "label": "Flutter Run - Chrome (Debug)",
+            "type": "shell",
+            "command": "flutter run --device-id Chrome --web-renderer canvaskit",
+            "problemMatcher": []
+        },
+        {
+            "label": "Flutter Run - Chrome (Developer)",
+            "type": "shell",
+            "command": "flutter run --device-id Chrome --web-renderer canvaskit --debug --dart-define=\"developer=true\"",
+            "problemMatcher": []
+        },
+        {
+            "label": "Flutter Run - Chrome (Profile)",
+            "type": "shell",
+            "command": "flutter run --device-id --web-renderer canvaskit Chrome --profile"
+        },
+        {
+            "label": "Flutter Run - Chrome (Release)",
+            "type": "shell",
+            "command": "flutter run --device-id --web-renderer canvaskit Chrome --release"
+        },
+        // Flutter Run - iOS @ robsiphone
+        {
+            "label": "Flutter Run - iOS @ robsiphone (Debug)",
+            "type": "shell",
+            "command": "flutter run --device-id robsiphone --debug",
+            "problemMatcher": []
+        },
+        {
+            "label": "Flutter Run - iOS @ robsiphone (Developer)",
+            "type": "shell",
+            "command": "flutter run --device-id robsiphone --debug --dart-define=\"developer=true\"",
+            "problemMatcher": []
+        },
+        {
+            "label": "Flutter Run - iOS @ robsiphone  (Profile)",
+            "type": "shell",
+            "command": "flutter run --device-id robsiphone --profile"
+        },
+        {
+            "label": "Flutter Run - iOS @ robsiphone  (Release)",
+            "type": "shell",
+            "command": "flutter run --device-id robsiphone --release"
+        },
+        // Flutter Run - Android @ SM N986B
+        {
+            "label": "Flutter Run - Android @ SM N986B (Debug)",
+            "type": "shell",
+            "command": "flutter run --device-id \"SM N986B\" --debug",
+            "problemMatcher": []
+        },
+        {
+            "label": "Flutter Run - Android @ SM N986B (Developer)",
+            "type": "shell",
+            "command": "flutter run --device-id \"SM N986B\" --debug --dart-define=\"developer=true\"",
+            "problemMatcher": []
+        },
+        {
+            "label": "Flutter Run - Android @ SM N986B (Profile)",
+            "type": "shell",
+            "command": "flutter run --device-id \"SM N986B\" --profile"
+        },
+        {
+            "label": "Flutter Run - Android @ SM N986B (Release)",
+            "type": "shell",
+            "command": "flutter run --device-id \"SM N986B\" --release"
+        },
+    ]
+}
